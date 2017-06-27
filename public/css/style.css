@@ -1,0 +1,51 @@
+ul {
+    list-style: none;
+}
+
+.todolist {
+    text-align: center;
+    margin: 100px auto;
+    width: 300px;
+    height: auto;
+    -webkit-box-shadow: 0px 0px 57px -8px rgba(117,106,117,1);
+    -moz-box-shadow: 0px 0px 57px -8px rgba(117,106,117,1);
+    box-shadow: 0px 0px 57px -8px rgba(117,106,117,1);
+}
+
+.headertodo {
+    background: url("../img/bg.jpg");
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 168px;
+    width: 300px;
+}
+
+.headertodo p {
+    margin-top: 30px;
+    font-size: 25px;
+    color: black;
+    font-weight: 700;
+    line-height: 22px;
+}
+
+span {
+    font-size: 10px;
+    font-weight: 600;
+    color: grey
+}
+
+h4 {
+    margin: 0;
+    padding: 15px;
+    border-bottom: 1px solid #c9c9c9;
+    border-top: 1px solid #c9c9c9;
+}
+
+.notify {
+    padding: 15px;
+    border: none;
+    color: #999699;
+    font-weight: 600;
+    opacity: 0.4;
+    margin: 5px;
+}
