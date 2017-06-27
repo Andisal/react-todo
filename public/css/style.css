@@ -61,11 +61,7 @@ h5 {
 }
 
 .todo {
-    font-weight: 600;
     text-align: left;
-}
-ul .fa {
-    position: relative;
-    right: 6px;
-    padding-right: 10px;
+    margin-left: 80px;
+    padding-bottom: 20px;
 }

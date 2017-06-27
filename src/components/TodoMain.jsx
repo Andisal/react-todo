@@ -6,25 +6,28 @@ export default class TodoMain extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            text: 'hrthtr',
-            icon: 'fa-pencil fa fa-2x'
+            text: ''
         }
     }
 
     onHandleClick (){
-        const newTodo = document.getElementById('inputTodo').value;
-        this.setState({text: newTodo});
+        const newTodo = document.getElementById('inputTodo');
+        this.setState({text: newTodo.value});
     }
 
     shouldComponentUpdate(){
-        const Todolist = document.getElementById('Todo');
-        const newtodo = document.createElement('li');
-        const icon = document.createElement('i');
-        icon.id = this.state.icon;
-        newtodo.className = 'todo';
-        newtodo.innerText = icon + this.state.text;
-        Todolist.appendChild(newtodo);
-        return true;
+        if(this.state.text !== ''){
+            const todo = document.createElement('p');
+            const Todolist = document.getElementById('todolist');
+            todo.className = 'todo';
+            todo.innerText = this.state.text;
+            Todolist.appendChild(todo);
+            return true;
+        }
+        else {
+            this.onHandleClick();
+            return false
+        }
     }
 
     render(){
