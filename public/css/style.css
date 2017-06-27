@@ -34,7 +34,7 @@ span {
     color: grey
 }
 
-h4 {
+h5 {
     margin: 0;
     padding: 15px;
     border-bottom: 1px solid #c9c9c9;
@@ -48,4 +48,24 @@ h4 {
     font-weight: 600;
     opacity: 0.4;
     margin: 5px;
+}
+
+.fa-plus-square-o {
+    color: #76b7f0;
+    position: relative;
+    top: 8px;
+}
+.fa-male {
+    position: relative;
+    left: 10px;
+}
+
+.todo {
+    font-weight: 600;
+    text-align: left;
+}
+ul .fa {
+    position: relative;
+    right: 6px;
+    padding-right: 10px;
 }
