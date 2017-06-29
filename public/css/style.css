@@ -1,11 +1,20 @@
 ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
+}
+li {
+    padding: 10px 15px;
+    font-weight: 600;
+    text-align: left;
+    margin-left: 65px;
+    font-size: 14px;
 }
 
 .todolist {
     text-align: center;
     margin: 100px auto;
-    width: 300px;
+    width: 350px;
     height: auto;
     -webkit-box-shadow: 0px 0px 57px -8px rgba(117,106,117,1);
     -moz-box-shadow: 0px 0px 57px -8px rgba(117,106,117,1);
@@ -59,9 +68,18 @@ h5 {
     position: relative;
     left: 10px;
 }
-
-.todo {
-    text-align: left;
-    margin-left: 80px;
-    padding-bottom: 20px;
+.icontask {
+    position: relative;
+    right: 20px;
+    top: 7px;
+}
+.fa-trash-o {
+    position: relative;
+    left: 120px;
+    top: 4px;
+}
+.footer {
+    border-top: 1px solid #c9c9c9;
+    height: 100px;
+    margin-top: 10px;
 }
