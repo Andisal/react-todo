@@ -5,7 +5,6 @@ export default class TodoFooter extends React.Component {
     render(){
         return (
             <div className="footer">
-
             </div>
         );
     }

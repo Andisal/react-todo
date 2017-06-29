@@ -5,8 +5,12 @@ export default class TodoHeader extends React.Component {
         return (
             <div>
                 <div className="headertodo">
+                    <i className="fa fa-bars fa-2x" aria-hidden="true"></i>
                     <p>
-                        27 <span><br/>Tuesday</span> <br/>June <span><br/>2017</span>
+                        {this.props.date} <br/>
+                        <span>Friday</span> <br/>
+                        June <br/>
+                        <span>{this.props.year}</span>
                     </p>
                 </div>
             </div>
