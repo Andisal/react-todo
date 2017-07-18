@@ -6,7 +6,6 @@ import Todo from "./components/Todo";
 import TodoFooter from "./components/TodoFooter";
 import TodoCreate from "./components/TodoCreate";
 
-
 class App extends Component {
 
     constructor(props){
@@ -20,9 +19,12 @@ class App extends Component {
             year: today.getFullYear(),
             todos: [
                 {id:1, text: 'Wake up', description: 'Lorem ipsum it sem div menstr', time: '6 AM', color: '#76a7ea'},
+                {id:2, text: 'Eat dinner', description: 'Lorem ipsum it sem div menstr', time: '1 PM', color: '#fc3554'},
+                {id:3, text: 'Work', description: 'Lorem ipsum it sem div menstr', time: '3 PM', color: '#76a7ea'}
             ]
         }
     }
+
 
     createTodo (newtododescription, newtodoname, newtodotime, newtodocolor){
         this.state.todos.push({
@@ -46,9 +48,6 @@ class App extends Component {
                                 createTodo={this.createTodo.bind(this)} 
                                 />
                             <TodoMain
-                            />
-                            <Todo
-                                {...this.state}
                                 todos={this.state.todos}
                             />
                             <TodoFooter/>
