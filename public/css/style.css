@@ -111,7 +111,6 @@ span.date {
 .todo-img {
     width: 5px;
     height: 5px;
-    background: #76a7ea;
     position: absolute;
     top: 20px;
     border-radius: 50%;
@@ -127,6 +126,7 @@ span.date {
 }
 .todo-description {
     text-align: left;
+    opacity: 0.7;
 }
 .todo-create {
     width: 50px;
@@ -137,6 +137,29 @@ span.date {
     position: relative;
     top: -25px;
     left: 115px;
+}
+.todo-add {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fc3554;
+    border: none;
+    position: relative;
+    top: 10px;
+    left: 50px;
+    color: #fff;
+    text-transform: uppercase;
+}
+.todo-close {
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    background: #fc3554;
+    border: none;
+    position: relative;
+    top: -3px;
+    left: 115px;
+    color: #fff;
 }
 p.add {
     color: #fff;

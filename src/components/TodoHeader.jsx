@@ -1,5 +1,4 @@
 import React from 'react';
-import TodoCreate from './TodoCreate'
 
 export default class TodoHeader extends React.Component {
     render(){
@@ -27,7 +26,6 @@ export default class TodoHeader extends React.Component {
                         July {this.props.year}
                     </p>
                 </div>
-                <TodoCreate />
             </div>
         );
     }

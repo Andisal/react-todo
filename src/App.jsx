@@ -4,6 +4,7 @@ import TodoHeader from './components/TodoHeader';
 import TodoMain from "./components/TodoMain";
 import Todo from "./components/Todo";
 import TodoFooter from "./components/TodoFooter";
+import TodoCreate from "./components/TodoCreate";
 
 
 class App extends Component {
@@ -14,20 +15,22 @@ class App extends Component {
         date = today.getDate();
         this.state = {
             text: '',
-            isEdit: 0,
             date: date ,
             month: today.getMonth(),
             year: today.getFullYear(),
             todos: [
-                {id:1, text: 'Wake up', description: 'Lorem ipsum it sem div menstr', time: '6 AM'},
+                {id:1, text: 'Wake up', description: 'Lorem ipsum it sem div menstr', time: '6 AM', color: '#76a7ea'},
             ]
         }
     }
 
-    createTodo (newTodo){
+    createTodo (newtododescription, newtodoname, newtodotime, newtodocolor){
         this.state.todos.push({
             id: this.state.todos.length + 1,
-            text: newTodo,
+            text: newtodoname,
+            description: newtododescription,
+            time: newtodotime,
+            color: '#' + newtodocolor
         });
         this.setState({todos: this.state.todos})
     }
@@ -37,10 +40,12 @@ class App extends Component {
                 <div className="col-md-12">
                     <div className="row">
                         <div className="center-block todolist">
-                            <TodoHeader date={this.state.date} month={this.state.month} year={this.state.year} />
-                            <TodoMain
+                            <TodoHeader date={this.state.date} month={this.state.month} year={this.state.year}/>
+                            <TodoCreate 
                                 {...this.state}
-                                createTodo={this.createTodo.bind(this)}
+                                createTodo={this.createTodo.bind(this)} 
+                                />
+                            <TodoMain
                             />
                             <Todo
                                 {...this.state}
