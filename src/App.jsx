@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import TodoHeader from './components/TodoHeader';
 import TodoMain from "./components/TodoMain";
-import Todo from "./components/Todo";
 import TodoFooter from "./components/TodoFooter";
 import TodoCreate from "./components/TodoCreate";
 

@@ -1,4 +1,4 @@
-import React, { Component }  from 'react';
+import React from 'react';
 import Todo from './Todo';
 
 export default class TodoMain extends React.Component {
