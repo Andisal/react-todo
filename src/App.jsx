@@ -19,7 +19,7 @@ class App extends Component {
             month: today.getMonth(),
             year: today.getFullYear(),
             todos: [
-                {id:1, text: 'Hello world', icon: "fa fa-square fa-2x"},
+                {id:1, text: 'Wake up', description: 'Lorem ipsum it sem div menstr', time: '6 AM'},
             ]
         }
     }
@@ -28,43 +28,9 @@ class App extends Component {
         this.state.todos.push({
             id: this.state.todos.length + 1,
             text: newTodo,
-            icon: "fa fa-square fa-2x"
         });
         this.setState({todos: this.state.todos})
     }
-
-    onDeleteTodo (todo){
-        let todos = this.state.todos;
-        for (let i =0;i<todos.length; i++){
-            if(todos[i].id === todo.id){
-                todos.splice(i, 1);
-            }
-        }
-        this.setState({todos:todos});
-    }
-    handleTodoEdit(todo){
-        this.setState({
-            text: todo.text,
-            isEdit: todo.id
-        })
-    }
-
-    handleChangeText(text){
-        this.setState({
-            text: text
-        })
-    }
-    handleTodoUpdate(todo){
-        let todos = this.state.todos;
-        for (let i =0;i<todos.length; i++){
-            if(todos[i].id === todo.id){
-                todos.splice(i, 1);
-            }
-        }
-        todos.push(todo);
-        this.setState({todos:todos});
-    }
-
     render() {
         return (
             <div className="container">
@@ -74,15 +40,11 @@ class App extends Component {
                             <TodoHeader date={this.state.date} month={this.state.month} year={this.state.year} />
                             <TodoMain
                                 {...this.state}
-                                changeText = {this.handleChangeText.bind(this)}
                                 createTodo={this.createTodo.bind(this)}
-                                onTodoUpdate={this.handleTodoUpdate.bind(this)}
                             />
                             <Todo
                                 {...this.state}
                                 todos={this.state.todos}
-                                onDeleteTodo={this.onDeleteTodo.bind(this)}
-                                editTodo={this.handleTodoEdit.bind(this)}
                             />
                             <TodoFooter/>
                         </div>

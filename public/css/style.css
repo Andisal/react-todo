@@ -1,5 +1,5 @@
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Ubuntu Condensed', sans-serif;
     word-wrap: break-word;
 }
 
@@ -79,7 +79,7 @@ span.date {
     font-size: 48px;
     font-style: oblique;
     position: absolute;
-    left: 0;
+    left: 13px;
 }
 .todolist {
     text-align: center;
@@ -100,44 +100,50 @@ span.date {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-.fa-square {
-    color: #1acadd;
+.day {
+    color: #fff;
+    font-family: 'Ubuntu Condensed', sans-serif;
 }
-.fa-bars{
+.full-date {
+    color: #fff;
+    margin-bottom: 30px;
+}
+.todo-img {
+    width: 5px;
+    height: 5px;
+    background: #76a7ea;
     position: absolute;
-    left: 20px;
-    top: 10px;
-    color: #76b7f0;
-    cursor: pointer;
+    top: 20px;
+    border-radius: 50%;
 }
-.fa-plus {
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    cursor: pointer;
+.todo-time {
+    margin-top: 12px;
+    margin-left: -23px;
 }
-.headertodo p {
-    margin-top: 30px;
-    font-size: 25px;
-    color: #ffffff;
-    font-weight: 700;
-    line-height: 22px;
-}
-
-span {
-    font-size: 11px;
-    font-weight: 600;
-    color: #818284;
-}
-
-h5 {
+.todo-name {
+    font-size: 21px;
+    text-align: left;
     margin: 0;
-    padding: 20px 20px;
-    border-bottom: 1px solid #c9c9c9;
-    border-top: 1px solid #c9c9c9;
-    position: relative;
 }
-
+.todo-description {
+    text-align: left;
+}
+.todo-create {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fc3554;
+    border: none;
+    position: relative;
+    top: -25px;
+    left: 115px;
+}
+p.add {
+    color: #fff;
+    font-size: 45px;
+    line-height: 0;
+    margin-top: 3px;
+}
 .notify {
     padding: 15px;
     border: none;
@@ -147,24 +153,6 @@ h5 {
     margin: 5px;
 }
 
-.fa-plus-square-o {
-    color: #76b7f0;
-    position: relative;
-    top: 8px;
-}
-.fa-male {
-    position: absolute;
-    right: 60px;
-    top: 12px;
-}
-.fa-bell-o{
-    color: #1acadd;
-    margin-right: 5px;
-}
-.todotext{
-    padding: 4px;
-    font-weight: 400;
-}
 .footer {
     border-top: 1px solid #c9c9c9;
     height: 100px;

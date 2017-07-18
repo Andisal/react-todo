@@ -1,4 +1,5 @@
 import React from 'react';
+import TodoCreate from './TodoCreate'
 
 export default class TodoHeader extends React.Component {
     render(){
@@ -21,7 +22,12 @@ export default class TodoHeader extends React.Component {
                             </span>
                         </div>
                     </div>
+                    <h1 className="day">Monday</h1>
+                    <p className="full-date">
+                        July {this.props.year}
+                    </p>
                 </div>
+                <TodoCreate />
             </div>
         );
     }
