@@ -5,13 +5,22 @@ export default class TodoHeader extends React.Component {
         return (
             <div>
                 <div className="headertodo">
-                    <i className="fa fa-bars fa-2x" aria-hidden="true"></i>
-                    <p>
-                        {this.props.date} <br/>
-                        <span>Friday</span> <br/>
-                        June <br/>
-                        <span>{this.props.year}</span>
-                    </p>
+                    <div>
+                        <a href="" className="btn-bread">
+                            <span className="first-span"></span>
+                            <span className="second-span"></span>
+                            <span className="last-span"></span>
+                        </a>
+                    </div>
+                    <h1 className="timeline">Timeline</h1>
+                    <a href=""><img src="./img/eye-icon.png" className="eye-icon" alt=""/></a>
+                    <div className="circle-date-block">
+                        <div className="circle-date">
+                            <span className="date">
+                                {this.props.date}
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
         );

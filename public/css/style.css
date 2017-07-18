@@ -1,5 +1,6 @@
 body {
-    font-family: "Open Sans";
+    font-family: 'Open Sans', sans-serif;
+    word-wrap: break-word;
 }
 
 ul {
@@ -17,30 +18,102 @@ li {
     margin-left: 65px;
     font-size: 14px;
 }
-
+.first-span {
+    background: #c5c3c0;
+    height: 2px;
+    width: 25px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+.second-span {
+    background: #c5c3c0;
+    height: 2px;
+    width: 13px;
+    position: absolute;
+    left: 20px;
+    top: 28px;
+}
+.last-span {
+    background: #c5c3c0;
+    height: 2px;
+    width: 20px;
+    position: absolute;
+    left: 20px;
+    top: 36px;
+}
+.timeline {
+    color: #fff;
+    font-size: 18px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.eye-icon {
+    width: 30px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+.circle-date-block {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background: #76a7ea;
+    margin: 20px auto;
+    position: relative;
+}
+.circle-date {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background: -moz-linear-gradient(top, #1e5799 0%, #207cca 0%, #2989d8 50%, #7db9e8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #1e5799 0%,#207cca 0%,#2989d8 50%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #1e5799 0%,#207cca 0%,#2989d8 50%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+span.date {
+    color: #2f4b88;
+    font-size: 48px;
+    font-style: oblique;
+    position: absolute;
+    left: 0;
+}
 .todolist {
     text-align: center;
     width: 350px;
     -webkit-box-shadow: 0px 0px 57px -8px rgba(117,106,117,1);
     -moz-box-shadow: 0px 0px 57px -8px rgba(117,106,117,1);
     box-shadow: 0px 0px 57px -8px rgba(117,106,117,1);
+    border-radius: 10px;
 }
 
 .headertodo {
-    background: url("../img/bg.jpg");
+    background: url("../img/clear-skies.jpg");
     background-repeat: no-repeat;
     display: inline-block;
-    height: 178px;
     width: 350px;
     background-position: center;
     position: relative;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
-
+.fa-square {
+    color: #1acadd;
+}
 .fa-bars{
     position: absolute;
     left: 20px;
     top: 10px;
     color: #76b7f0;
+    cursor: pointer;
+}
+.fa-plus {
+    position: absolute;
+    right: 20px;
+    top: 10px;
     cursor: pointer;
 }
 .headertodo p {
@@ -59,9 +132,10 @@ span {
 
 h5 {
     margin: 0;
-    padding: 15px 10px;
+    padding: 20px 20px;
     border-bottom: 1px solid #c9c9c9;
     border-top: 1px solid #c9c9c9;
+    position: relative;
 }
 
 .notify {
@@ -79,8 +153,17 @@ h5 {
     top: 8px;
 }
 .fa-male {
-    position: relative;
-    left: 10px;
+    position: absolute;
+    right: 60px;
+    top: 12px;
+}
+.fa-bell-o{
+    color: #1acadd;
+    margin-right: 5px;
+}
+.todotext{
+    padding: 4px;
+    font-weight: 400;
 }
 .footer {
     border-top: 1px solid #c9c9c9;
