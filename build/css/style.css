@@ -1,7 +1,15 @@
+body {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    word-wrap: break-word;
+}
+
 ul {
     list-style: none;
     padding: 0;
     margin: 0;
+}
+.row {
+    margin: 15px;
 }
 li {
     padding: 10px 15px;
@@ -10,46 +18,155 @@ li {
     margin-left: 65px;
     font-size: 14px;
 }
-
+.first-span {
+    background: #c5c3c0;
+    height: 2px;
+    width: 25px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+.second-span {
+    background: #c5c3c0;
+    height: 2px;
+    width: 13px;
+    position: absolute;
+    left: 20px;
+    top: 28px;
+}
+.last-span {
+    background: #c5c3c0;
+    height: 2px;
+    width: 20px;
+    position: absolute;
+    left: 20px;
+    top: 36px;
+}
+.timeline {
+    color: #fff;
+    font-size: 18px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.eye-icon {
+    width: 30px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+.circle-date-block {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background: #76a7ea;
+    margin: 20px auto;
+    position: relative;
+}
+.circle-date {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background: -moz-linear-gradient(top, #1e5799 0%, #207cca 0%, #2989d8 50%, #7db9e8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #1e5799 0%,#207cca 0%,#2989d8 50%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #1e5799 0%,#207cca 0%,#2989d8 50%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+span.date {
+    color: #2f4b88;
+    font-size: 48px;
+    font-style: oblique;
+    position: absolute;
+    left: 13px;
+}
 .todolist {
     text-align: center;
-    margin: 100px auto;
     width: 350px;
-    height: auto;
-    -webkit-box-shadow: 0px 0px 57px -8px rgba(117,106,117,1);
-    -moz-box-shadow: 0px 0px 57px -8px rgba(117,106,117,1);
-    box-shadow: 0px 0px 57px -8px rgba(117,106,117,1);
+    -webkit-box-shadow: 0px 3px 31px 5px rgba(118,167,234,0.52);
+    -moz-box-shadow: 0px 3px 31px 5px rgba(118,167,234,0.52);
+    box-shadow: 0px 3px 31px 5px rgba(118,167,234,0.52);
+    border-radius: 10px;
 }
 
 .headertodo {
-    background: url("../img/bg.jpg");
+    background: url("../img/clear-skies.jpg");
     background-repeat: no-repeat;
     display: inline-block;
-    height: 168px;
-    width: 300px;
+    width: 350px;
+    background-position: center;
+    position: relative;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
-
-.headertodo p {
-    margin-top: 30px;
-    font-size: 25px;
-    color: black;
-    font-weight: 700;
-    line-height: 22px;
+.day {
+    color: #fff;
+    font-family: 'Ubuntu Condensed', sans-serif;
 }
-
-span {
-    font-size: 10px;
-    font-weight: 600;
-    color: grey
+.full-date {
+    color: #fff;
+    margin-bottom: 30px;
 }
-
-h5 {
+.todo-img {
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 20px;
+    border-radius: 50%;
+}
+.todo-time {
+    margin-top: 12px;
+    margin-left: -23px;
+}
+.todo-name {
+    font-size: 21px;
+    text-align: left;
     margin: 0;
-    padding: 15px;
-    border-bottom: 1px solid #c9c9c9;
-    border-top: 1px solid #c9c9c9;
 }
-
+.todo-description {
+    text-align: left;
+    opacity: 0.7;
+}
+.todo-create {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fc3554;
+    border: none;
+    position: relative;
+    top: -25px;
+    left: 115px;
+}
+.todo-add {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fc3554;
+    border: none;
+    position: relative;
+    top: 10px;
+    left: 50px;
+    color: #fff;
+    text-transform: uppercase;
+}
+.todo-close {
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    background: #fc3554;
+    border: none;
+    position: relative;
+    top: -3px;
+    left: 115px;
+    color: #fff;
+}
+p.add {
+    color: #fff;
+    font-size: 45px;
+    line-height: 0;
+    margin-top: 3px;
+}
 .notify {
     padding: 15px;
     border: none;
@@ -59,27 +176,6 @@ h5 {
     margin: 5px;
 }
 
-.fa-plus-square-o {
-    color: #76b7f0;
-    position: relative;
-    top: 8px;
-}
-.fa-male {
-    position: relative;
-    left: 10px;
-}
-.icontask {
-    position: relative;
-    right: 20px;
-    top: 7px;
-}
-.fa-trash-o {
-    position: relative;
-    left: 120px;
-    top: 4px;
-}
 .footer {
-    border-top: 1px solid #c9c9c9;
-    height: 100px;
-    margin-top: 10px;
+    height: 50px;
 }

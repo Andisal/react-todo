@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.css"],"names":[],"mappings":"AAAA,KACI,SACA,UACA,uCAA4C","file":"static/css/main.e78028a3.css","sourcesContent":["body {\r\n    margin: 0;\r\n    padding: 0;\r\n    font-family: 'Ubuntu Condensed', sans-serif;\r\n}\n\n\n// WEBPACK FOOTER //\n// ./src/index.css"],"sourceRoot":""}
