@@ -17,14 +17,12 @@ class App extends Component {
             month: today.getMonth(),
             year: today.getFullYear(),
             todos: [
-                {id:1, text: 'Wake up', description: 'Lorem ipsum it sem div menstr', time: '6 AM', color: '#76a7ea'},
-                {id:2, text: 'Eat dinner', description: 'Lorem ipsum it sem div menstr', time: '1 PM', color: '#fc3554'},
-                {id:3, text: 'Work', description: 'Lorem ipsum it sem div menstr', time: '3 PM', color: '#76a7ea'}
+                {id:0, text: 'Wake up', description: 'Lorem ipsum it sem div menstr', time: '6 AM', color: '#76a7ea'},
+                {id:1, text: 'Eat dinner', description: 'Lorem ipsum it sem div menstr', time: '1 PM', color: '#fc3554'},
+                {id:2, text: 'Work', description: 'Lorem ipsum it sem div menstr', time: '3 PM', color: '#76a7ea'}
             ]
         }
     }
-
-
     createTodo (newtododescription, newtodoname, newtodotime, newtodocolor){
         this.state.todos.push({
             id: this.state.todos.length + 1,
@@ -35,7 +33,14 @@ class App extends Component {
         });
         this.setState({todos: this.state.todos})
     }
-    
+    deleteTodo (todo){
+        for(let i=0; i<this.state.todos.length;i++){
+            if(this.state.todos[i].id === todo){
+                this.state.todos.splice(i, 1);
+            }
+        }
+        this.setState({todos: this.state.todos})
+    }
     render() {
         return (
             <div className="container">
@@ -44,11 +49,11 @@ class App extends Component {
                         <div className="center-block todolist">
                             <TodoHeader date={this.state.date} month={this.state.month} year={this.state.year}/>
                             <TodoCreate 
-                                {...this.state}
                                 createTodo={this.createTodo.bind(this)} 
                                 />
                             <TodoMain
                                 todos={this.state.todos}
+                                deleteTodo={this.deleteTodo.bind(this)}
                             />
                             <TodoFooter/>
                         </div>

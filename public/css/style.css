@@ -166,6 +166,18 @@ span.date {
     color: #fff;
     text-transform: uppercase;
 }
+.todo-add:hover {
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: all 600ms ease-in;
+    -moz-transition: all 600ms ease-in;
+    -ms-transition: all 600ms ease-in;
+    -o-transition: all 600ms ease-in;
+    transition: all 600ms ease-in;
+}
 .todo-close {
     width: 27px;
     height: 27px;
@@ -176,6 +188,18 @@ span.date {
     top: -3px;
     left: 115px;
     color: #fff;
+}
+.todo-close:hover {
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+    -webkit-transition: all 600ms ease-in;
+    -moz-transition: all 600ms ease-in;
+    -ms-transition: all 600ms ease-in;
+    -o-transition: all 600ms ease-in;
+    transition: all 600ms ease-in;
 }
 p.add {
     color: #fff;

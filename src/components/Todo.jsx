@@ -2,6 +2,9 @@ import React  from 'react';
 
 export default class Todo extends React.Component {
 
+    deleteTodo(todo){
+        this.props.deleteTodo(todo);
+    }
     render(){
         return (
             <div>
@@ -14,6 +17,7 @@ export default class Todo extends React.Component {
                                <div className="col-md-8">
                                    <h1 className="todo-name" style={{color: todo.color}}>{todo.text}</h1>
                                    <p className="todo-description" style={{color: todo.color}}>{todo.description}</p>
+                                   <p key = {todo.id} onClick={this.deleteTodo.bind(this, todo.id)}>x</p>
                                </div>
                             </div>
                         );
