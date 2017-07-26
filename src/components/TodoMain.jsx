@@ -8,7 +8,7 @@ export default class TodoMain extends React.Component {
             <div className="main">
                 <Todo
                     todos={this.props.todos} 
-                    deleteTodo={this.props.deleteTodo.bind(this)}
+                    deleteTodo={this.props.deleteTodo}
                 />
              </div>
         );

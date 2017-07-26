@@ -11,6 +11,25 @@ ul {
 .row {
     margin: 15px;
 }
+.main .row:hover {
+    -moz-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    -webkit-transition: all 600ms ease;
+    -moz-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+    transition: all 600ms ease;
+}
+.main .row {
+    -webkit-transition: all 600ms ease;
+    -moz-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+    transition: all 600ms ease;
+}
 li {
     padding: 10px 15px;
     font-weight: 600;
@@ -118,6 +137,7 @@ span.date {
 .todo-time {
     margin-top: 12px;
     margin-left: -23px;
+    opacity: 0.8;
 }
 .todo-name {
     font-size: 21px;
@@ -177,6 +197,9 @@ span.date {
     -ms-transition: all 600ms ease-in;
     -o-transition: all 600ms ease-in;
     transition: all 600ms ease-in;
+}
+.todo-delete {
+    margin-top: 8px;
 }
 .todo-close {
     width: 27px;

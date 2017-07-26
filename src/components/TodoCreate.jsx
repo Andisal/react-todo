@@ -31,8 +31,9 @@ export default class TodoCreate extends React.Component {
     let newtodoname = this.refs.inputName.value;
     let newtododescription = this.refs.inputDescription.value;
     let newtodotime = this.refs.inputTime.value;
-    let newtodocolor = this.refs.inputColor.value
-    if(!newtodoname || !newtododescription || !newtodotime || !newtodocolor){
+    let newtodocolor = 100000 - 0.5 + Math.random() * (999999 - 100000 + 1)
+    newtodocolor = Math.round(newtodocolor);
+    if(!newtodoname || !newtododescription || !newtodotime){
         alert('Please enter a Todo');
         return;
     }
@@ -64,8 +65,6 @@ export default class TodoCreate extends React.Component {
             <input type="text" className="form-control" ref="inputName"/>
             <label>Description</label>
             <input type="text" className="form-control" ref="inputDescription"/>
-            <label>Color</label>
-            <input type="text" className="form-control" ref="inputColor"/>
         </div>
           <button onClick={this.addNewTodo.bind(this)}className="todo-add">Add</button>
         </Modal>

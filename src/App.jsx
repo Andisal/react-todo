@@ -16,6 +16,7 @@ class App extends Component {
             date: date ,
             month: today.getMonth(),
             year: today.getFullYear(),
+            locationCity: 'Chelyabinsk',
             todos: [
                 {id:0, text: 'Wake up', description: 'Lorem ipsum it sem div menstr', time: '6 AM', color: '#76a7ea'},
                 {id:1, text: 'Eat dinner', description: 'Lorem ipsum it sem div menstr', time: '1 PM', color: '#fc3554'},
@@ -47,7 +48,7 @@ class App extends Component {
                 <div className="col-md-12">
                     <div className="row">
                         <div className="center-block todolist">
-                            <TodoHeader date={this.state.date} month={this.state.month} year={this.state.year}/>
+                            <TodoHeader date={this.state.date} month={this.state.month} year={this.state.year} locationCity={this.state.locationCity}/>
                             <TodoCreate 
                                 createTodo={this.createTodo.bind(this)} 
                                 />
